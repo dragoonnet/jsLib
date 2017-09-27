@@ -6,7 +6,7 @@ function getIDNO(){
 	var part1 = nowc;
 	var tmpdate = new Date(Math.floor( Math.random()*1609459200000)-631180800000);
 	var part2 = tmpdate.getFullYear() + (tmpdate.getMonth() + 101+"").substr(1,2) + (tmpdate.getDate()+ 101+"").substr(1,2);
-	var part3 = Math.floor( Math.random()*200)+1;
+	var part3 = (Math.floor( Math.random()*200)+1001+"").substr(1,3);
 	var code = (part1+part2+part3).split('');
 	var factor = [7,9,10,5,8,4,2,1,6,3,7,9,10,5,8,4,2];
 	var parity = [1,0,'X',9,8,7,6,5,4,3,2];
